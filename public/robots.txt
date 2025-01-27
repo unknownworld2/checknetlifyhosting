@@ -1,0 +1,17 @@
+# Block all crawlers from specific paths
+User-agent: *
+Disallow: /admin
+Disallow: /accounts
+Disallow: /_next/
+Disallow: /api/
+Disallow: /public/  # Uncommented to block access to /public
+
+# Allow all crawlers access to these pages
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /library
+Allow: /contact
+
+# Sitemap location
+Sitemap: https://siratemustaqeem.website/sitemap.xml

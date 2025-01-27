@@ -1,21 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Slider Styles */
+.swiper-button-prev,
+.swiper-button-next {
+    width: 60px !important;
+    height: 60px !important;
+    color: #161616 !important;
+    background-color: rgba(255, 255, 255, 0.48) !important;
+    border-radius: 50px;
+    transition: 0.2s linear;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #161616 !important;
+    color: white !important;
+    transition: 0.2s linear;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 30px !important;
+    text-align: center !important;
+}
+
+/* Slider right and left buttons */
+.swiper-button-next {
+    padding-left: 8px !important;
+    margin-right: 55px !important;
+}
+
+.swiper-button-prev {
+    margin-left: 55px !important;
+}
+
+/* Slider right and left buttons */
+
+.mySwiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.bg-gradient-instagram {
+    background: linear-gradient(45deg,
+            #833ab4,
+            /* Purple */
+            #fd1d1d,
+            /* Pink/Red */
+            #fcb045
+            /* Orange */
+        );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* For best image quality */
+.image-quality {
+    -webkit-transform: translateZ(5);
+    transform: translateZ(5);
+    /* Firefox */
+    image-rendering: optimizeSpeed;
+    /* Modern Browsers */
+}
+
+/* Hide the default YouTube play button */
+.youtube-container iframe {
+    pointer-events: none;
+    /* Prevents interaction with the YouTube iframe */
+}
+
+@media all and (max-width:600px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 20px !important;
+    }
+
+    /* Slider right and left buttons */
+    .swiper-button-next {
+        margin-right: 20px !important;
+    }
+
+    .swiper-button-prev {
+        margin-left: 20px !important;
+    }
+
 }
