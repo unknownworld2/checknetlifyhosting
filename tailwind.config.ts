@@ -1,10 +1,9 @@
 import type { Config } from "tailwindcss";
 
-//const defaultTheme = require("tailwindcss/defaultTheme");
-import defaultTheme from 'tailwindcss/defaultTheme';
+const defaultTheme = require("tailwindcss/defaultTheme");
+const plugin = require('tailwindcss/plugin')
 
-
-export default {
+const config: Config = {
   darkMode: 'selector',
   important: true,
   corePlugins: {
@@ -160,4 +159,5 @@ export default {
     require('@tailwindcss/typography'),
     require('@tailwindcss/line-clamp')
   ]
-} satisfies Config;
+};
+export default config;
