@@ -7,6 +7,7 @@ import {
     TextField,
     TextFieldVariants,
 } from "@mui/material";
+import { JSX } from "react/jsx-runtime";
 
 interface CustomTextFieldProps {
     id: string;
